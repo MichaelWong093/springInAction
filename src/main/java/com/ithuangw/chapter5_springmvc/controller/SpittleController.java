@@ -1,12 +1,9 @@
 package com.ithuangw.chapter5_springmvc.controller;
 
 import com.ithuangw.chapter5_springmvc.dao.SpittleRepository;
-import com.ithuangw.chapter5_springmvc.entity.Spittle;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import java.util.List;
 
 /**
  * @author Huangw
@@ -39,8 +36,8 @@ public class SpittleController {
 
     @RequestMapping("/spittles")
     public String spittles(Model model) {
-        List<Spittle> spittles = spittleRepository.findSpittles(Long.MAX_VALUE, 20);
-        model.addAttribute("spittleList", spittles);
+       // List<Spittle> spittles = spittleRepository.findSpittles(Long.MAX_VALUE, 20);
+       // model.addAttribute("spittleList", spittles);
         return "list";
     }
 }
